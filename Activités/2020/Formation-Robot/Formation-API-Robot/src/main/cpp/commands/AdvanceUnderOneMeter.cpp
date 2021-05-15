@@ -1,23 +1,27 @@
 #include <commands / AdvanceUnderOneMeter.h>
 #include <Robot.h>
 
-void AdvanceUnderOneMeter::AdvanceUnderOneMeter()
+void AdvanceUnderOneMeter::AdvanceUnderOneMeter(/* ... */) override
 {
-
+   AddRequirements ({...});
+   AddRequirements ({...});
 }
 
-void AdvanceUnderOneMeter::Initialize() {}
+void AdvanceUnderOneMeter::Initialize() override{}
 
-void AdvanceUnderOneMeter::Execute()
+void AdvanceUnderOneMeter::Execute() override
 {
-    
+    /* faire avancer */
 }
 
-void AdvanceUnderOneMeter::IsFinished()
+void AdvanceUnderOneMeter::IsFinished() override 
 {
-    
+    if(/* ... */>/*1 meter*/)
+    {
+        /* faire arreter d avancer */
+    }
 }
 
-void AdvanceUnderOneMeter::End() {}
+void AdvanceUnderOneMeter::Interrupted(bool interrompu) override {}
 
-void AdvanceUnderOneMeter::Interrupted() {}
+bool  AdvanceUnderOneMeter :: End() { return false; }

@@ -6,11 +6,13 @@ class AdvanceUnderOneMeter : public frc::Command {
 
 public:
 
-AdvanceUnderOneMeter();
+AdvanceUnderOneMeter(/* ... */);
 void Initialize() override;
 void Execute() override;
-bool IsFinished() override;
-void End() override;
-void Interrupted() override;
+void IsFinished() override;
+void Interrupted(bool interrompu) override;
+bool End();
+private:
 
+/* ... */
 };
