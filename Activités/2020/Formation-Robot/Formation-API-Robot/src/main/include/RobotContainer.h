@@ -6,7 +6,7 @@
 
 #include <frc2/command/Command.h>
 
-#include "commands/ExampleCommand.h"
+#include "commands/AdvanceUnderOneMeter.h"
 #include "subsystems/ExampleSubsystem.h"
 
 /**
@@ -28,4 +28,5 @@ class RobotContainer {
   ExampleCommand m_autonomousCommand;
 
   void ConfigureButtonBindings();
+  advanceUnderOneMeter.AdvanceUnderOneMeter();
 };
