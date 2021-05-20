@@ -6,10 +6,12 @@ UltrasonicSensor::UltrasonicSensor()
     mCaptDist2Ptr = new frc::AnalogInput(kCaptDist2);
 }
 
-void UltrasonicSensor::GetDistance()
+double UltrasonicSensor::GetDistance()
 {
-  return mCaptDistPtr->GetVoltage()*VoltToFootDistCapt;
-  return mCaptDist2Ptr->GetVoltage()*VoltToFootDistCapt;
+  return mCaptDistPtr->GetVoltage()*VoltToMeterDistCapt;
+  return mCaptDist2Ptr->GetVoltage()*VoltToMeterDistCapt;
 
   // return value is a double 
 } 
+
+
