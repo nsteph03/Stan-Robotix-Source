@@ -12,4 +12,4 @@ void UltrasonicSensor::GetDistance()
   return mCaptDist2Ptr->GetVoltage()*VoltToFootDistCapt;
 
   // return value is a double 
-}
+} 
