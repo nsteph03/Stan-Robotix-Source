@@ -10,7 +10,7 @@ RobotContainer::RobotContainer() :
 {
   // Initialize all of your commands and subsystems here
   // https://github.com/YamanZarour/StanRobotix2020/blob/master/StanRobotix2020/src/main/cpp/RobotContainer.cpp
-  advanceUnderOneMeter.Initialize();
+  AdvanceOverOneMeter.Initialize();
   // Configure the button bindings
   ConfigureButtonBindings();
 }

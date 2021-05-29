@@ -6,8 +6,7 @@
 
 #include <frc2/command/Command.h>
 
-#include "commands/AdvanceUnderOneMeter.h"
-#include "subsystems/ExampleSubsystem.h"
+#include "commands/AdvanceOverOneMeter.h"
 #include "subsystems/UltrasonicSensor.h"
 #include "subsystems/TankDrive.h"
 
@@ -34,11 +33,10 @@ class RobotContainer {
   RobotContainer * mInstance;
 
   // The robot's subsystems and commands are defined here...
-  ExampleSubsystem m_subsystem;
-  ExampleCommand m_autonomousCommand;
+  
 
   void ConfigureButtonBindings();
-  AdvanceUnderOneMeter mAdvanceUnderOneMeter;
+  AdvanceOverOneMeter mAdvanceOverOneMeter;
   UltrasonicSensor mUltrasonicSensor;
   TankDrive mTamkDrive;
 };
