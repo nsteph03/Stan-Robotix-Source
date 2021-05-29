@@ -28,5 +28,5 @@ class RobotContainer {
   ExampleCommand m_autonomousCommand;
 
   void ConfigureButtonBindings();
-  advanceUnderOneMeter.AdvanceUnderOneMeter();
+  AdvanceUnderOneMeter mAdvanceUnderOneMeter;
 };

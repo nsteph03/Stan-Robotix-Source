@@ -1,27 +1,29 @@
 #include <commands / AdvanceUnderOneMeter.h>
 #include <Robot.h>
 
-void AdvanceUnderOneMeter::AdvanceUnderOneMeter(/* ... */) override
-{
-   AddRequirements ({...});
-   AddRequirements ({...});
-}
+void AdvanceUnderOneMeter::AdvanceUnderOneMeter() override {}
 
-void AdvanceUnderOneMeter::Initialize() override{}
+void AdvanceUnderOneMeter::Initialize() override
+{
+    // mMotor->start();
+}
 
 void AdvanceUnderOneMeter::Execute() override
 {
     /* faire avancer */
+    // mMotor->move();
 }
 
-void AdvanceUnderOneMeter::IsFinished() override 
+bool AdvanceUnderOneMeter::IsFinished() override 
 {
-    if(/* ... */>/*1 meter*/)
-    {
-        /* faire arreter d avancer */
-    }
+    int wCurrentDistance = 0; // mUltraSonicPtr->getDistanceInMeter()
+
+    return wCurrentDistance > 1.0;
 }
 
-void AdvanceUnderOneMeter::Interrupted(bool interrompu) override {}
+void AdvanceUnderOneMeter::Interrupted() override {}
 
-bool  AdvanceUnderOneMeter :: End() { return false; }
+void  AdvanceUnderOneMeter :: End() 
+{
+    // mMotor->stop();
+}

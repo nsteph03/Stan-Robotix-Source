@@ -9,9 +9,9 @@ public:
 AdvanceUnderOneMeter(/* ... */);
 void Initialize() override;
 void Execute() override;
-void IsFinished() override;
-void Interrupted(bool interrompu) override;
-bool End();
+bool IsFinished() override;
+void Interrupted() override;
+void End();
 private:
 
 /* ... */
