@@ -8,6 +8,8 @@
 
 #include "commands/AdvanceUnderOneMeter.h"
 #include "subsystems/ExampleSubsystem.h"
+#include "subsystems/UltrasonicSensor.h"
+#include "subsystems/TankDrive.h"
 
 /**
  * This class is where the bulk of the robot should be declared.  Since
@@ -22,11 +24,21 @@ class RobotContainer {
 
   frc2::Command* GetAutonomousCommand();
 
+  RobotContainer * getInstance();
+
+  UltrasonicSensor & getUltrasonicSensor() { return mUltrasonicSensor; }
+
+  TankDrive & getTankDrive() { return mTankDrive; }
+
  private:
+  RobotContainer * mInstance;
+
   // The robot's subsystems and commands are defined here...
   ExampleSubsystem m_subsystem;
   ExampleCommand m_autonomousCommand;
 
   void ConfigureButtonBindings();
   AdvanceUnderOneMeter mAdvanceUnderOneMeter;
+  UltrasonicSensor mUltrasonicSensor;
+  TankDrive mTamkDrive;
 };

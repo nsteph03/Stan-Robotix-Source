@@ -4,7 +4,10 @@
 
 #include "RobotContainer.h"
 
-RobotContainer::RobotContainer() : m_autonomousCommand(&m_subsystem) {
+RobotContainer::RobotContainer() : 
+  m_autonomousCommand(&m_subsystem),
+  mInstance(this)
+{
   // Initialize all of your commands and subsystems here
   // https://github.com/YamanZarour/StanRobotix2020/blob/master/StanRobotix2020/src/main/cpp/RobotContainer.cpp
   advanceUnderOneMeter.Initialize();

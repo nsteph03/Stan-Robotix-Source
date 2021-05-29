@@ -8,8 +8,8 @@ class UltrasonicSensor: public frc2::SubsystemBase
 {
  private:
    
-  constexpr int kCaptDist = 0;
-  constexpr int kCaptDist2 = 1;
+  int kCaptDist = 0;
+  int kCaptDist2 = 1;
   double VoltToMeterDistCapt = 3.5606 * 0.3048 ;
 
   frc::AnalogInput* mCaptDistPtr;
