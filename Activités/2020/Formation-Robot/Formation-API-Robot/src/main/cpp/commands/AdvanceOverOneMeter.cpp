@@ -1,9 +1,9 @@
 #pragma once 
-#include "commands/AdvanceOverOneMeter.h"
-#include "Robot.h"
-#include "RobotContainer.h"
-#include "UltrasonicSensor.h"
-#include "TankDrive.h"
+#include "../../include/commands/AdvanceOverOneMeter.h"
+#include "../../include/Robot.h"
+#include "../../include/RobotContainer.h"
+#include "../../include/subsystems/UltrasonicSensor.h"
+#include "../../include/subsystems/TankDrive.h"
 
 void AdvanceOverOneMeter::AdvanceOverOneMeter() override {}
 
