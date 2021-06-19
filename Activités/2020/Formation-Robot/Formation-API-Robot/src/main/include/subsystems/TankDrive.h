@@ -10,8 +10,8 @@ class TankDrive
 
     TankDrive();
 
-    double GetLeftJoystick();
-    double GetRightJoystick();
-    void Drive(double iLeft, double iRight);
-    void Stop();
+    double getLeftJoystick();
+    double getRightJoystick();
+    void drive(double iLeft, double iRight);
+    void stop();
 };
