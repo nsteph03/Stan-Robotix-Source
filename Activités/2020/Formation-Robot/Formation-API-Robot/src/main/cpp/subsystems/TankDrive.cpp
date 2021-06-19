@@ -1,10 +1,10 @@
 #include "subsystems\TankDrive.h"
 #include <math.h>
-#include "SmartDashboard\SmartDashboard.h"
+#include <SmartDashboard\SmartDashboard.h>
 
 TankDrive::TankDrive()
 {
-    int mJoystickPtr = new Joystick(kJoystick);//a en discuter
+    mJoystickPtr = new Joystick(kJoystick);
 }
 
 double TankDrive::GetLeftJoystick()
