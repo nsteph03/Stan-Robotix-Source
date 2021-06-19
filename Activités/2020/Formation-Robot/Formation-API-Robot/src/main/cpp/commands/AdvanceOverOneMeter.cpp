@@ -7,17 +7,13 @@
 
 void AdvanceOverOneMeter::AdvanceOverOneMeter() override {}
 
-void AdvanceOverOneMeter::Initialize() override
-{
-    RobotContainer * wRobotContainer = RobotContainer::getInstance();
-    TankDrive & wTankDrive = wRobotContainer->getTankDrive()
-    //...//
-}
+void AdvanceOverOneMeter::Initialize() override {}
 
 void AdvanceOverOneMeter::Execute() override
 {
     RobotContainer * wRobotContainer = RobotContainer::getInstance();
     TankDrive & wTankDrive = wRobotContainer->getTankDrive()
+    
     wTankDrive.Drive(100,100);
 }
 
@@ -25,7 +21,8 @@ bool AdvanceOverOneMeter::IsFinished() override
 {
     RobotContainer * wRobotContainer = RobotContainer::getInstance();
     UltrasonicSensor & wUltrasonicSensor = wRobotContainer->getUltrasonicSensor()
-    int wCurrentDistance = wUltrasonicSensor.GetDistance();
+    
+    double wCurrentDistance = wUltrasonicSensor.GetDistance1();
 
     return wCurrentDistance < 1.0;
 }
