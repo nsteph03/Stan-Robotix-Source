@@ -4,4 +4,12 @@
 
 #pragma once
 
+  constexpr int kJoystick = 0;
+  constexpr int kJoystickLeft = 1;
+  constexpr int kJoystickRight = 5;
+  // utiliser dans le tankdrive
 
+  int kCaptDist = 0;
+  int kCaptDist2 = 1;
+  double kVoltToMeterDistCapt = 3.5606 * 0.3048 ;
+  // utiliser dans Ultrasonic

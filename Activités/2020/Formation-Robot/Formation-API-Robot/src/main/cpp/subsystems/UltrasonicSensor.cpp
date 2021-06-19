@@ -3,14 +3,18 @@
 UltrasonicSensor::UltrasonicSensor()
 {
     mCaptDistPtr = new frc::AnalogInput(kCaptDist);
-    mCaptDist2Ptr = new frc::AnalogInput(kCaptDist2); //un commentaire Raph?
+    mCaptDist2Ptr = new frc::AnalogInput(kCaptDist2); 
 }
 
-double UltrasonicSensor::GetDistance()
+double UltrasonicSensor::getDistance1()
 {
-  return mCaptDistPtr->GetVoltage()*VoltToMeterDistCapt;
-  return mCaptDist2Ptr->GetVoltage()*VoltToMeterDistCapt; //un commentaire Raph?
+  return mCaptDistPtr->GetVoltage()*kVoltToMeterDistCapt;
+  // return value is a double 
+} 
 
+double UltrasonicSensor::getDistance2()
+{
+  return mCaptDist2Ptr->GetVoltage()*kVoltToMeterDistCapt;
   // return value is a double 
 } 
 

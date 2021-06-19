@@ -1,28 +1,28 @@
 #include "subsystems\TankDrive.h"
 #include <math.h>
-#include "SmartDashboard\SmartDashboard.h"
+#include <SmartDashboard\SmartDashboard.h>
 
 TankDrive::TankDrive()
 {
-    int mJoystickPtr = new Joystick(kJoystick);//a en discuter
+    mJoystickPtr = new Joystick(kJoystick);
 }
 
-double TankDrive::GetLeftJoystick()
+double TankDrive::getLeftJoystick()
 {
     return -mJoystickPtr->GetRawAxis(kJoystickLeft);
 }
    
-double TankDrive::GetRightJoystick()
+double TankDrive::getRightJoystick()
 {
      return -mJoystickPtr->GetRawAxis(kJoystickRight);
 }
 
-void TankDrive::Drive(double iLeft, double iRight)
+void TankDrive::drive(double iLeft, double iRight)
 {
    Drive.TankDrive(iLeft, iRight,false);
 }
 
-void TankDrive::Stop() 
+void TankDrive::stop() 
 {
     Drive.TankDrive(0, 0,false);
 }
