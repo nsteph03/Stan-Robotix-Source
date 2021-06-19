@@ -22,7 +22,7 @@ bool AdvanceOverOneMeter::IsFinished() override
     RobotContainer * wRobotContainer = RobotContainer::getInstance();
     UltrasonicSensor & wUltrasonicSensor = wRobotContainer->getUltrasonicSensor()
     
-    double wCurrentDistance = wUltrasonicSensor.GetDistance1();
+    double wCurrentDistance = wUltrasonicSensor.getDistance1();
 
     return wCurrentDistance < 1.0;
 }

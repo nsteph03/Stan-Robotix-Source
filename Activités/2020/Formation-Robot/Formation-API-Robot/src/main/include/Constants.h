@@ -7,6 +7,12 @@
   constexpr int kJoystick = 0;
   constexpr int kJoystickLeft = 1;
   constexpr int kJoystickRight = 5;
+
+  constexpr int kMotorLeft1 = 1;
+  constexpr int kMotorLeft2 = 2;
+  constexpr int kMotorRight1 = 3;
+  constexpr int kMotorRight2 = 0;
+
   // utiliser dans le tankdrive
 
   int kCaptDist = 0;
