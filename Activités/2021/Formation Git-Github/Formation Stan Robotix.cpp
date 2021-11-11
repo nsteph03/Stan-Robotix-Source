@@ -1,30 +1,23 @@
 #include <iostream>
-#include "Sphere.h"
+#include "SphereToma.h"
 
 int main()
 {
-    ArthurSphere::Sphere wSphere; 
+    Toma::Sphere wSphere; 
+    float* wCoordCenter = new float [2];
+    float* wRadius = new float;
 
-    Point* wPoint = new Point;
+    std::cout << "Quelles sont les corrdonnées de ton point ? \n";
+    std::cin >> wCoordCenter[0] >> wCoordCenter[1];
 
-    std::cout<<"\n Objets init";
+    std::cout << "Quel est le rayon de ton point ? \n";
+    std::cin >> *wRadius;
 
-    float wXcoord =2;
-    float wYcoord =2;
-    wPoint->setCoordX(&wXcoord);
-    wPoint->setCoordY(&wYcoord);
-    std::cout<<"\n Point init";
+    wSphere.setCenter(wCoordCenter);
+    wSphere.setRadius(wRadius);
 
-    wSphere.setPoint(wPoint);
-    std::cout<<"\n Sphere midle init";
+    std::cout << "La surface de ta sphère est : " << wSphere.getSurface() << std::endl;
+    std::cout << "Le volume de ta sphère est : " << wSphere.getVolume() << std::endl;
 
-    float* Ray = new float;
-    *Ray = 2;
-
-    wSphere.setRay(Ray);
-    std::cout<<"\n Sphere Ray init";
-
-    std::cout<< "\n Surface : " << wSphere.getSurface();
-    std::cout<< "\n Volume : " << wSphere.getVolume();
-
+    return 1;
 }
